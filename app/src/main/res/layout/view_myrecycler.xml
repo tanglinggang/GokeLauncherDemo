@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id = "@+id/MyRecyclerViewImageBack"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        />
+
+    <ImageView
+        android:id = "@+id/MyRecyclerViewImageIcon"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent = "20%"
+        app:layout_widthPercent = "50%"
+        app:layout_heightPercent = "50%"
+        android:visibility="visible"
+        />
+
+    <com.example.wyman.gokelauncherdemo.View.MyTextView
+        android:id = "@+id/MyRecyclerViewName"
+        android:layout_below="@id/MyRecyclerViewImageIcon"
+        app:layout_heightPercent="20%"
+        android:layout_width="wrap_content"
+        android:layout_alignRight="@id/MyRecyclerViewImageIcon"
+        android:layout_alignLeft="@id/MyRecyclerViewImageIcon"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:includeFontPadding="false"
+        />
+</android.support.percent.PercentRelativeLayout>
