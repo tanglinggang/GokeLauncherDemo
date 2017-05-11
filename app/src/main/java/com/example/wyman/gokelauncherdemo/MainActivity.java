@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         MainLauncherFunctionList = launcherFunctionInit();
         MyRecyclerView recyclerView = (MyRecyclerView) findViewById(R.id.MainActivityRecyclerView);
         MainAdapter myRecyclerViewAdapter = new MainAdapter(this,MainLauncherFunctionList);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,6, LinearLayoutManager.HORIZONTAL,false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,6, GridLayoutManager.HORIZONTAL,false);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {

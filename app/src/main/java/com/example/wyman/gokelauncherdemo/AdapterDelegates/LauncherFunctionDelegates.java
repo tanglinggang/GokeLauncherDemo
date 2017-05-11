@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.wyman.gokelauncherdemo.AppManagerActivity;
 import com.example.wyman.gokelauncherdemo.AppUninstallActivity;
 import com.example.wyman.gokelauncherdemo.Custom.DisplayableItem;
 import com.example.wyman.gokelauncherdemo.Custom.LauncherFunction;
@@ -58,6 +59,11 @@ public class LauncherFunctionDelegates extends AdapterDelegate<List<DisplayableI
 
                 if(launcherFunction.getName().equalsIgnoreCase("系统设置")){
                     Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                    activity.startActivity(intent);
+                }
+
+                if(launcherFunction.getName().equalsIgnoreCase("我的应用")){
+                    Intent intent = new Intent(activity, AppManagerActivity.class);
                     activity.startActivity(intent);
                 }
             }
